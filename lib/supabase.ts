@@ -22,7 +22,28 @@ declare var process: any;
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Lazy initialize supabase client to avoid errors during build when env vars are not set
+let supabaseClient: ReturnType<typeof createClient> | null = null
+
+function getSupabaseClient() {
+  if (supabaseUrl && supabaseAnonKey) {
+    if (!supabaseClient) {
+      supabaseClient = createClient(supabaseUrl, supabaseAnonKey)
+    }
+    return supabaseClient
+  }
+  return null
+}
+
+export const supabase = {
+  from: (table: string) => {
+    const client = getSupabaseClient()
+    if (client) {
+      return client.from(table)
+    }
+    throw new Error('Supabase client not initialized')
+  }
+}
 
 export interface ContactMessage {
   name: string
