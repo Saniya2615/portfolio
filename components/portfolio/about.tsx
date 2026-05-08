@@ -123,8 +123,8 @@ export function About() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { value: '2+', label: 'Years Learning' },
-            { value: '5+', label: 'Projects Completed' },
+            { value: '3+', label: 'Years Learning' },
+            { value: '1+', label: 'Projects Completed' },
             { value: '4+', label: 'Certifications' },
             { value: '6+', label: 'Achievements' },
           ].map((stat, index) => (

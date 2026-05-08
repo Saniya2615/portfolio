@@ -56,7 +56,7 @@ const experiences = [
 
     current: true,
 
-    certificate: '',
+    certificate: '/zidio.png',
   },
 
   // NEED BASE INDIA
