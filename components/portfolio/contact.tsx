@@ -135,13 +135,15 @@ export function Contact() {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, label: 'Email', value: 'saniya7sma@gmail.com', href: 'https://mail.google.com/mail/?view=cm&to=saniya7sma@gmail.com' },
-                { icon: Phone, label: 'Phone', value: '+91 9341701343', href: 'tel:+91 9341701343' },
-                { icon: MapPin, label: 'Location', value: 'Bangalore, India', href: '#' },
+                { icon: Mail, label: 'Email', value: 'saniya7sma@gmail.com', href: 'https://mail.google.com/mail/?view=cm&to=saniya7sma@gmail.com', external: true },
+                { icon: Phone, label: 'Phone', value: '+91 9341701343', href: 'tel:+91 9341701343', external: false },
+                { icon: MapPin, label: 'Location', value: 'Bangalore, India', href: '#', external: false },
               ].map((item, index) => (
                 <motion.a
                   key={item.label}
                   href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
