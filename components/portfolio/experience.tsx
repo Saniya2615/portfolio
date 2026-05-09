@@ -19,7 +19,7 @@ const experiences = [
   {
     title: 'AI for Skilling Program Trainee',
     company: 'Capgemini',
-    period: '2024',
+    period: '2025',
     type: 'Training Program',
 
     description:
@@ -54,7 +54,7 @@ const experiences = [
       'Dashboard Development',
     ],
 
-    current: true,
+    current: false,
 
     certificate: '/zidio.png',
   },

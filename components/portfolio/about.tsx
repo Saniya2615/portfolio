@@ -62,16 +62,17 @@ export function About() {
           className="text-center mb-20"
         >
           {/* About Me Badge */}
-          <span className="inline-block px-8 py-3 text-xl font-semibold text-blue-600 bg-blue-100 rounded-full mb-10">
+          <span className="inline-block px-10 py-4 text-3xl md:text-4xl font-bold text-blue-600 bg-blue-100 rounded-full mb-12">
             About Me
           </span>
 
           {/* Description */}
-          <p className="text-slate-600 max-w-4xl mx-auto text-xl leading-10">
-            I&apos;m an MCA student with a burning passion for technology and a
-            relentless drive to create meaningful solutions. My journey in tech
-            is fueled by curiosity and the desire to make a positive impact
-            through innovation.
+          <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed mb-6">
+            I&apos;m an MCA student who&apos;s curious about technology and how it works. I enjoy learning new tools, creating useful solutions, and exploring different areas of tech. I&apos;m also interested in data science and how data can be used to solve real problems.
+          </p>
+
+          <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+            I believe in continuous learning and applying my skills to projects that create real impact. My passion drives me to stay updated with emerging technologies and contribute meaningfully to the tech community.
           </p>
         </motion.div>
 

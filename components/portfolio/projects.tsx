@@ -32,7 +32,7 @@ const projects = [
       'https://github.com/Saniya2615/Linear-Regression',
 
     demo:
-      'https://github.com/Saniya2615/Linear-Regression',
+      'http://localhost/stclaret_portal/stclaret_portal/',
 
     color: 'from-blue-500 to-cyan-500',
   },

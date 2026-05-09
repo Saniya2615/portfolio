@@ -70,24 +70,24 @@ export function Hero() {
             className="flex-1 text-center lg:text-left"
           >
             {/* Welcome Badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-block px-4 py-2 mb-6 text-sm font-medium text-primary bg-white/20 rounded-full"
             >
               Welcome to my portfolio
-            </motion.div>
+            </motion.div> */}
 
             {/* Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight"
             >
               Hi, I&apos;m{' '}
-              <span className="text-white">
+              <span className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
                 Saniya S
               </span>
             </motion.h1>
@@ -97,7 +97,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg md:text-xl text-white font-medium mb-4"
+              className="text-xl md:text-2xl text-blue-100 font-semibold mb-4"
             >
               MCA Student | Aspiring Data Analyst & Software Developer
             </motion.p>
@@ -107,7 +107,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-base md:text-lg text-white/90 max-w-2xl mx-auto lg:mx-0 mb-8"
+              className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto lg:mx-0 mb-12 leading-relaxed"
             >
               Passionate MCA student with strong interest in Data Science,
               Analytics, and Software Development. Dedicated to building
@@ -122,12 +122,19 @@ export function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
-
               {/* Download Resume Button */}
               <a href="/resume.pdf" download>
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 transition-opacity font-semibold"
+                  className="
+                    w-full
+                    sm:w-auto
+                    bg-white
+                    text-primary
+                    hover:bg-white/90
+                    font-semibold
+                    shadow-lg
+                  "
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
@@ -136,10 +143,17 @@ export function Hero() {
 
               {/* Contact Button */}
               <Button
-                variant="outline"
                 size="lg"
-                className="w-full sm:w-auto border-white text-white hover:bg-white/10"
                 asChild
+                className="
+                  w-full
+                  sm:w-auto
+                  bg-white
+                  text-primary
+                  hover:bg-white/90
+                  font-semibold
+                  shadow-lg
+                "
               >
                 <a href="#contact">
                   <Mail className="mr-2 h-5 w-5" />
@@ -205,13 +219,13 @@ export function Hero() {
                   repeat: Infinity,
                   ease: 'linear',
                 }}
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-white via-white/80 to-white p-1"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-white via-blue-100 to-cyan-100 p-1"
               >
                 <div className="w-full h-full rounded-full bg-primary" />
               </motion.div>
 
               {/* Profile Image */}
-              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-white/30 to-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
                 <img
                   src="/profile-avatar.jpg"
                   alt="Saniya S"
@@ -226,7 +240,7 @@ export function Hero() {
                   duration: 3,
                   repeat: Infinity,
                 }}
-                className="absolute -bottom-4 -right-4 px-4 py-2 bg-white text-primary rounded-full font-semibold"
+                className="absolute -bottom-4 -right-4 px-5 py-3 bg-gradient-to-r from-white to-blue-50 text-primary rounded-full font-bold shadow-xl"
               >
                 <span className="text-sm">
                   Open to Work
